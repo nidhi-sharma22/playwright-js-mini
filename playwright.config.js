@@ -5,7 +5,7 @@ module.exports = defineConfig({
   testDir: './tests',
   timeout: 30000,
   reporter: [
-    ['html', { open: 'never' }],
+    ['list'],
     ['allure-playwright']
   ],
   use: {
