@@ -28,3 +28,11 @@ jobs:
         run: |
           npm install -g allure-commandline --force
           npm run report
+          name: Upload Allure Report
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v3
+         with:
+          name: allure-report
+          path: allure-report
+    
