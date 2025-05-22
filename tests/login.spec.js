@@ -9,4 +9,5 @@ test('User is able to login', async({page}) => {
     await login.goto();
     await login.login('student','Password123')
     await expect(page).toHaveURL('https://practicetestautomation.com/logged-in-successfully/')
+    // testing
 });
