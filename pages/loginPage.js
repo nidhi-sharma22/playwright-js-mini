@@ -1,17 +1,17 @@
-class loginPage{
+class LoginPage{
 
     constructor(page){
 
         this.page=page;
 
-        this.usernameInput = page.locator('#username');
-        this.passwordInput = page.locator('#password');
-        this.loginButton = page.locator('#submit');
+        this.usernameInput = page.locator('[data-test="username"]');
+        this.passwordInput = page.locator('[data-test="password"]');
+        this.loginButton = page.locator('[data-test="login-button"]');
 
     }
 
     async goto(){
-        await this.page.goto("https://practicetestautomation.com/practice-test-login/");
+        await this.page.goto("https://www.saucedemo.com/");
     }
 
     async login(username, password) {
@@ -21,4 +21,4 @@ class loginPage{
       }
     
 }
-module.exports =loginPage;
+module.exports = {LoginPage};

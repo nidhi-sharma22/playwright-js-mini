@@ -4,7 +4,7 @@ const { defineConfig } = require('@playwright/test');
 module.exports = defineConfig({
   testDir: './tests',
   timeout: 30000,
-  retries: 2,
+  retries: 0,
   reporter: [
     ['list'],
     ['allure-playwright']
@@ -13,5 +13,6 @@ module.exports = defineConfig({
     headless: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
+    baseURL: 'https://example.com',
   },
 });
