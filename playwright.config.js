@@ -10,7 +10,7 @@ module.exports = defineConfig({
     ['allure-playwright']
   ],
   use: {
-    headless: true,
+    headless: false,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     baseURL: 'https://example.com',
