@@ -12,8 +12,8 @@ test('User is able to login', async({loginPage, inventoryPage}) => {
     await expect(loginPage.page.locator('.inventory_list')).toBeVisible();
     const titles= await inventoryPage.getProductTitles();
     console.log('Product Titles:',titles);
-    await inventoryPage.addToCartByProductName('Sauce Labs Bolt T-Shirt');
-
+    //await inventoryPage.addToCartByProductName('Sauce Labs Bolt T-Shirt');
+    await inventoryPage.addAllProductsToCart();
     //console.log('Product Added');
 
 });

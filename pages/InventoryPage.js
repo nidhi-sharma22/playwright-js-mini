@@ -52,6 +52,22 @@ class InventoryPage extends BasePage{
         console.log(`❌ Product not found: ${productName}`);
 
     }
+
+    async addAllProductsToCart(){
+
+        // Adding all the products to the cart & Validate the cart badge count equals the number of products.
+
+        const addToCart = this.page.locator(".btn_inventory");
+        const count = await addToCart.count();
+
+        for(let i=0; i<=count-1; i++){
+
+            await addToCart.nth(i).click();
+        }
+        console.log('All the Products added to cart')
+
+
+    }
 }
 
 module.exports = { InventoryPage };
